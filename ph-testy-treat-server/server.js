@@ -32,7 +32,11 @@ const upload = multer({
 });
 
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://brandbite.digital'  // Allow requests from this origin
+}));
+
+
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.raw({ limit: "10mb" }));
@@ -40,6 +44,7 @@ app.use(bodyParser.raw({ limit: "10mb" }));
 
 const verifyJWT = (req, res, next) => {
   const authorization = req.headers.authorization;
+console.log(authorization, "not auth jwt")
   if (!authorization) {
     return res
       .status(401)
@@ -79,14 +84,18 @@ async function run() {
       }
     });
 
-    const userCollection = client.db("PHTestyTreat").collection("users");
-    const recipeCollection = client.db("PHTestyTreat").collection("recipes");
+    const userCollection = client.db("brandvisualdb").collection("users");
+    const recipeCollection = client.db("brandvisualdb").collection("recipes");
+
 
     app.post("/jwt", (req, res) => {
       const user = req.body;
+console.log(user)
       const token = jwt.sign(user, process.env.SECRET_ACCESS_TOKEN, {
         expiresIn: "1h",
       });
+
+console.log(token)
       res.send({ token });
     });
 
@@ -138,7 +147,7 @@ async function run() {
         if (!user) {
           return res.status(404).json({ error: "User not found" });
         }
-        console.log("fdsf");
+        console.log(user,"fdsf");
 
         // Find the creator
         const creator = await userCollection.findOne(creatorFilter);
@@ -148,7 +157,8 @@ async function run() {
 
         // Check if user already purchased the recipe
         const recipe = await recipeCollection.findOne(recipeFilter);
-        if (recipe.purChased_by.includes(email)) {
+console.log(recipe)
+        if (recipe?.purChased_by?.includes(email)) {
           return res.status(200).json({
             success: true,
             isAlreadyPurchased: true,
@@ -317,8 +327,8 @@ async function run() {
 
     // Add Recipe
     app.post("/api/recipe/create", upload.single("recipe_image"), async (req, res) => {
-      console.log(req.body); // Form fields
-      console.log(req.file); // Uploaded file details
+      console.log(req.body,"form fileds"); // Form fields
+      console.log(req.file, "files"); // Uploaded file details
     
       if (!req.file) {
         return res.status(400).json({ error: "No file uploaded" });
@@ -334,7 +344,7 @@ async function run() {
       } = req.body;
     
       const imageUrl = req?.file ? req.file?.path : "";
-      console.log(imageUrl)
+      console.log(imageUrl, "imageurl")
     
       try {
         // Construct new recipe data object with image URL
@@ -351,6 +361,7 @@ async function run() {
           purchased_by: [],
           createdAt: new Date(),
         };
+console.log(newRecipeData,"full data")
     
         // Save new recipe data to database
         const result = await recipeCollection.insertOne(newRecipeData);
