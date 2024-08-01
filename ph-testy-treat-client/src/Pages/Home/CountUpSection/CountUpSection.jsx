@@ -5,6 +5,7 @@ import { useGetAllSateQuery } from "../../../ReduxStore/api/StatsApi";
 import { FaBowlFood } from "react-icons/fa6";
 const CountUpSection = () => {
   const { data, isLoading, isError, error } = useGetAllSateQuery();
+  console.log(data);
   return (
     <div className="">
       <div className="container grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-12 gap-6 my-28 ">

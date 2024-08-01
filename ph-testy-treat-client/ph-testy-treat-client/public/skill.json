@@ -1,0 +1,82 @@
+[
+    {
+      "id": 1,
+      "title": "HTML",
+      "icon": "./skilimage/html.png"
+    },
+    {
+      "id": 2,
+      "title": "CSS",
+      "icon": "./skilimage/css.png"
+    },
+    {
+      "id": 3,
+      "title": "Bootstrap",
+      "icon": "./skilimage/bootstrap.png"
+    },
+    {
+      "id": 4,
+      "title": "Tailwind",
+      "icon": "./skilimage/tailwind.png"
+    },
+    {
+      "id": 5,
+      "title": "Sass",
+      "icon": "./skilimage/sass.png"
+    },
+    {
+      "id": 6,
+      "title": "JavaScript",
+      "icon": "./skilimage/javascript.png"
+    },
+    {
+      "id": 7,
+      "title": "React",
+      "icon": "./skilimage/react.png"
+    },
+    {
+      "id": 8,
+      "title": "React Router",
+      "icon": "./skilimage/react-router.png"
+    },
+    {
+      "id": 9,
+      "title": "Redux Toolkit",
+      "icon": "./skilimage/redux-tookit.png"
+    },
+    {
+      "id": 10,
+      "title": "Next Js",
+      "icon": "./skilimage/next-js.png"
+    },
+    {
+      "id": 11,
+      "title": "Firebase",
+      "icon": "./skilimage/firebase.png"
+    },
+    {
+      "id": 12,
+      "title": "Git",
+      "icon": "./skilimage/git.png"
+    },
+    {
+      "id": 13,
+      "title": "Express Js",
+      "icon": "./skilimage/express-js.png"
+    },
+    {
+      "id": 14,
+      "title": "Node Js",
+      "icon": "./skilimage/node-js.png"
+    },
+    {
+      "id": 15,
+      "title": "MongoDB",
+      "icon": "./skilimage/mongodb.png"
+    },
+    {
+      "id": 16,
+      "title": "WordPress",
+      "icon": "./skilimage/wordpress.png"
+    }
+  ]

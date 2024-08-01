@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply max-w-full md:w-10/12 mx-auto px-3 md:px-0;
+}
+.active {
+  @apply text-orange-500;
+}
+
+.banner-img {
+  background-image: url("https://i.ibb.co/5T7B9nF/foodhub-slider-main-food-v4.jpg");
+}
+
+.thingIntro-BG {
+  background-image: url("https://i.ibb.co/0f71N5K/home-bottom-removebg-preview.png");
+}
+
+.primary-btn {
+  @apply px-4  py-2 bg-orange-500 text-white border-none;
+}
+
+
+
+
+
+.rti--container{
+  background-color: #02132B !important;
+}
+.rti--tag{
+   background-color: transparent !important;
+   border: 1px solid #F97316;
+}
+.vertical-timeline{
+  padding: 0 !important;
+}
+.vertical-timeline::before{
+  background-color: #F97316 !important;
+}

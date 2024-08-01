@@ -22,6 +22,7 @@ const RecipeCard = ({ recipe, isSuggestion }) => {
 
   const existUser = recipe?.purChased_by?.includes(user?.email);
 
+  console.log(coin);
   const handleViewRecipe = async () => {
     if (!user) {
       toast.warn("Please Login First", {
@@ -73,6 +74,7 @@ const RecipeCard = ({ recipe, isSuggestion }) => {
             updateRecipeData: userData,
             recipeId: recipe._id,
           }).then((res) => {
+            console.log(res);
             if (res?.data?.isAlreadyPurchased) {
               dispatch(setReFetch(!isCoinRefetch));
 
@@ -88,15 +90,12 @@ const RecipeCard = ({ recipe, isSuggestion }) => {
     }
   };
 
+  console.log(recipe);
   return (
     <div className="card  bg-base-100 shadow-xl">
       <figure className="px-10 pt-10">
         <img
-          src={
-            recipe?.imageCloud === false
-              ? `${import.meta.env.VITE_BASEURL}/${recipe?.recipe_image}`
-              : recipe?.recipe_image
-          }
+          src={recipe?.recipe_image}
           alt={recipe?.recipe_name}
           className="rounded-xl md:h-52 w-full object-cover"
         />

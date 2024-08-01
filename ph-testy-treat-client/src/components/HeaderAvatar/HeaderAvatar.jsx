@@ -39,6 +39,12 @@ const HeaderAvatar = ({ user, displayName }) => {
               <span className="badge">New</span>
             </Link>
           </li>
+          <li>
+            <a>Settings</a>
+          </li>
+          <li>
+            <a>Logout</a>
+          </li>
         </ul>
       )}
     </div>

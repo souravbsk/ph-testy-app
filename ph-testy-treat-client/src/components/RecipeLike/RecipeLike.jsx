@@ -23,6 +23,7 @@ const RecipeLike = ({ user, id, liked_by }) => {
         email: user?.email,
       };
       addLike({ updateRecipeData: recipeData, recipeId: id }).then((res) => {
+        console.log(res);
         if (res?.data?.isLiked) {
           setIsLike(true)
           toast(`👍 ${res?.data?.message} `, {

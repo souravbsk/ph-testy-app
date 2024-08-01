@@ -7,6 +7,7 @@ import Button from "../../components/Button/Button";
 const OurRecipes = () => {
   const { data, isLoading, isError, error } = useGetAllRecipesQuery();
 
+  console.log(data);
   return (
     <div className="container mt-12 md:mt-20">
       <div className="text-center">

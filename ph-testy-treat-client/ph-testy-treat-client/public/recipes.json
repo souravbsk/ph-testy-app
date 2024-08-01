@@ -1,0 +1,85 @@
+[
+  {
+    "id": "1",
+    "title": "Classic Spaghetti Carbonara",
+    "image": "https://example.com/image1.jpg",
+    "description": "A traditional Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
+    "createAt": "2023-05-25T08:30:00Z",
+    "creatorEmail": "chef1@example.com",
+    "purchased_by": 150,
+    "video": "https://example.com/video1.mp4",
+    "watchCount": 1200,
+    "country": "Italy",
+    "ingredients": [
+      "spaghetti",
+      "eggs",
+      "parmesan cheese",
+      "pancetta",
+      "black pepper"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Chicken Tikka Masala",
+    "image": "https://example.com/image2.jpg",
+    "description": "A popular Indian curry dish made with marinated chicken chunks in a spiced creamy tomato sauce.",
+    "createAt": "2023-05-26T09:00:00Z",
+    "creatorEmail": "chef2@example.com",
+    "purchased_by": 200,
+    "video": "https://example.com/video2.mp4",
+    "watchCount": 1500,
+    "country": "India",
+    "ingredients": [
+      "chicken",
+      "yogurt",
+      "garam masala",
+      "tomato sauce",
+      "cream"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Beef Stroganoff",
+    "image": "https://example.com/image3.jpg",
+    "description": "A Russian dish of sautéed pieces of beef served in a sauce with sour cream.",
+    "createAt": "2023-05-27T10:15:00Z",
+    "creatorEmail": "chef3@example.com",
+    "purchased_by": 80,
+    "video": "https://example.com/video3.mp4",
+    "watchCount": 800,
+    "country": "Russia",
+    "ingredients": ["beef", "mushrooms", "onions", "sour cream", "beef broth"]
+  },
+  {
+    "id": "4",
+    "title": "Chicken Alfredo",
+    "image": "https://example.com/image4.jpg",
+    "description": "An Italian-American pasta dish made with fettuccine, chicken, and a creamy Alfredo sauce.",
+    "createAt": "2023-05-28T11:45:00Z",
+    "creatorEmail": "chef4@example.com",
+    "purchased_by": 320,
+    "video": "https://example.com/video4.mp4",
+    "watchCount": 2500,
+    "country": "USA",
+    "ingredients": [
+      "fettuccine",
+      "chicken",
+      "butter",
+      "heavy cream",
+      "parmesan cheese"
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Sushi Rolls",
+    "image": "https://example.com/image5.jpg",
+    "description": "Traditional Japanese dish consisting of vinegared rice, seafood, and vegetables, rolled in nori.",
+    "createAt": "2023-05-29T13:00:00Z",
+    "creatorEmail": "chef5@example.com",
+    "purchased_by": 190,
+    "video": "https://example.com/video5.mp4",
+    "watchCount": 2100,
+    "country": "Japan",
+    "ingredients": ["sushi rice", "nori", "raw fish", "vegetables", "soy sauce"]
+  }
+]

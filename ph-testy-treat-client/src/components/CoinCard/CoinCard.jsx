@@ -15,6 +15,7 @@ const CoinCard = ({ coin, dollar }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location?.state?.from?.pathname || "/";
+  console.log(from, location);
 
   const dispatch = useDispatch();
 
@@ -32,12 +33,14 @@ const CoinCard = ({ coin, dollar }) => {
         confirmButtonText: "Yes, delete it!",
       }).then((result) => {
         if (result.isConfirmed) {
+          console.log("first");
           const coinData = {
             coin,
             dollar,
           };
           parchesCoin({ updateCoinData: coinData, email: user?.email }).then(
             (res) => {
+              console.log(res.data);
               if (res?.data?.data?.modifiedCount > 0) {
                 dispatch(setReFetch(!isCoinRefetch));
 

@@ -3,14 +3,10 @@ import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { setReFetch } from "../../ReduxStore/slices/coinSlice";
 
 const SocialLogin = () => {
   const { GoogleSignIn } = useContext(AuthContext);
-  const dispatch = useDispatch();
 
-  const { isCoinRefetch } = useSelector((state) => state.coin);
   const handleWithGoogleSignIn = async () => {
     try {
       const res = await GoogleSignIn();
@@ -21,9 +17,8 @@ const SocialLogin = () => {
         currentUser
       );
 
+      console.log(response);
       if (response?.data?.success) {
-        dispatch(setReFetch(!isCoinRefetch));
-
         toast.success(
           `Hey, ${currentUser.displayName}, welcome to Testy Food!`
         );

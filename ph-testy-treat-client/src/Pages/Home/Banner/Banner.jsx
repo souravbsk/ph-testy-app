@@ -23,6 +23,7 @@ const Banner = () => {
         currentUser
       );
 
+      console.log(response);
       if (response?.data?.success) {
         navigate("/add-recipe");
         dispatch(setReFetch(!isCoinRefetch));
